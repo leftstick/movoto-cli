@@ -9,6 +9,8 @@ movoto-cli
 
 movoto-cli makes you have fun in Chinese new year
 
+![](./docs/img/preview.png)
+
 ## Install ##
 
 ```bash
