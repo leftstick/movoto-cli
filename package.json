@@ -1,0 +1,36 @@
+{
+  "name": "movoto-cli",
+  "version": "1.0.0",
+  "description": "movoto-cli make you have fun in chinese new year",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "movoto": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "img"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leftstick/movoto-cli.git"
+  },
+  "keywords": [
+    "movoto"
+  ],
+  "author": "Howard.Zuo",
+  "license": "MIT",
+  "engine-strict": true,
+  "engines": {
+    "node": ">= 5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/leftstick/movoto-cli/issues"
+  },
+  "homepage": "https://github.com/leftstick/movoto-cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "picture-tube": "^1.0.0"
+  }
+}
