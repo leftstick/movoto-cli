@@ -29,6 +29,9 @@ movoto
 * `--version` Print the current `movoto-cli` version
 * `--help`  Print `movoto-cli` help menu
 
+## API ##
+
+For more usage, check it here: [API](./docs/api.md)
 
 ## LICENSE ##
 

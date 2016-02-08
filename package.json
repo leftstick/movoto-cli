@@ -1,6 +1,6 @@
 {
   "name": "movoto-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "movoto-cli make you have fun in chinese new year",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -31,6 +31,8 @@
   "homepage": "https://github.com/leftstick/movoto-cli#readme",
   "dependencies": {
     "commander": "^2.9.0",
-    "picture-tube": "^1.0.0"
+    "just-promiseify": "^1.1.1",
+    "picture-tube": "^1.0.0",
+    "update-notifier": "^0.6.0"
   }
 }
