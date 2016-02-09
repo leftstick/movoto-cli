@@ -9,7 +9,7 @@
 ### git ###
 
 ```bash
-movoto git -u xxx -e zzz@mmm.com
+movoto git <options>
 ```
 
 **git options**
@@ -17,7 +17,12 @@ movoto git -u xxx -e zzz@mmm.com
 * `-u`, `--username`: Username will be displayed in `git log`
 * `-e`, `--email`: Email will be displayed in `git log`
 
-
 Config `git` for the local repo, including `alias`, `ui`, `encoding`...
 
 ### lint ###
+
+```bash
+movoto lint <filePath>
+```
+
+Lint your JavaScript source code.
