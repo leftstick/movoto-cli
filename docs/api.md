@@ -26,3 +26,5 @@ movoto lint <filePath>
 ```
 
 Lint your JavaScript source code.
+
+* `filePath`: Can be either explicit file path, or [glob-pattern](https://github.com/isaacs/node-glob#glob-primer)
