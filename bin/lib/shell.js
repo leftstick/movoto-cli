@@ -11,7 +11,10 @@ var next = function(cmds, displayCmdItself, cb) {
     if (displayCmdItself) {
         console.log(cmd);
     }
-    var child = exec(cmd, function() {
+    var child = exec(cmd, function(err) {
+        if (err) {
+            return;
+        }
         next(cmds, displayCmdItself, cb);
     });
     child.stdout.pipe(process.stdout);
