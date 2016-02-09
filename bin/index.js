@@ -4,6 +4,7 @@
 
 var fs = require('fs');
 var resolve = require('path').resolve;
+var chalk = require('chalk');
 var program = require('commander');
 var updateNotifier = require('update-notifier');
 var promiseify = require('just-promiseify');
@@ -45,7 +46,15 @@ if (process.argv.length === 2) {
                         c.help();
                         return;
                     }
-                    cmd.action(options);
+                    try {
+                        cmd.action(options, function(err) {
+                            if (err) {
+                                console.log(chalk.red(e));
+                            }
+                        });
+                    } catch (e) {
+                        console.log(chalk.red(e));
+                    }
                 });
             });
         })

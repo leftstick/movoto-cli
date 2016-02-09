@@ -1,0 +1,48 @@
+{
+    "rules": {
+        "indent": [
+            2,
+            4,
+            { "SwitchCase": 1 }
+        ],
+        "quotes": [
+            2,
+            "single"
+        ],
+        "linebreak-style": 0,
+        "semi": [
+            2,
+            "always"
+        ],
+        "strict": [1, "global"],
+        "no-console": 1,
+        "no-alert": 1
+    },
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true,
+        "commonjs": true
+    },
+    "globals": {
+        "define": true,
+        "React": true,
+        "angular": true,
+        "require": true,
+        "_": true,
+        "console": true,
+        "process": true,
+        "jQuery": true,
+        "module": true,
+        "alert": true,
+        "describe": true,
+        "it": true,
+        "$": true,
+        "before": true
+    },
+    "ecmaFeatures": {
+        "jsx": false,
+        "experimentalObjectRestSpread": true,
+        "modules": false
+    }
+}
