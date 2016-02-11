@@ -49,7 +49,7 @@ if (process.argv.length === 2) {
                     try {
                         cmd.action(options, function(err) {
                             if (err) {
-                                console.log(chalk.red(e));
+                                console.log(chalk.red(err));
                             }
                         });
                     } catch (e) {

@@ -3,17 +3,17 @@
 var exec = require('child_process').exec;
 
 var next = function(cmds, displayCmdItself, cb) {
-    if (!cmds.length) {
-        return cb && cb();
-    }
     var cmd = cmds.shift();
 
     if (displayCmdItself) {
         console.log(cmd);
     }
-    var child = exec(cmd, function(err) {
+    var child = exec(cmd, function(err, stdout, stderr) {
         if (err) {
-            return;
+            return cb && cb(err);
+        }
+        if (!cmds.length) {
+            return cb && cb(null, stdout, stderr);
         }
         next(cmds, displayCmdItself, cb);
     });
