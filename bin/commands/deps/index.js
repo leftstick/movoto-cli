@@ -23,7 +23,7 @@ var cmd = {
 
                 return promiseify(shell)([
                     'npm outdated --loglevel=error'
-                ], false);
+                ], {displayCmdItself: false, displayCmdResult: true});
             })
             .then(function(arr) {
                 if (!arr[0]) {

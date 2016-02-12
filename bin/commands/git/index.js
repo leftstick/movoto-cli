@@ -41,7 +41,7 @@ var cmd = {
             'git config --local alias.pr pull --rebase',
             'git config --local alias.pl pull',
             'git config --local alias.ps push'
-        ], true);
+        ], {displayCmdItself: true, displayCmdResult: false});
     }
 };
 

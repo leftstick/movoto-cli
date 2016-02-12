@@ -2,10 +2,10 @@
 
 var exec = require('child_process').exec;
 
-var next = function(cmds, displayCmdItself, cb) {
+var next = function(cmds, options, cb) {
     var cmd = cmds.shift();
 
-    if (displayCmdItself) {
+    if (options.displayCmdItself) {
         console.log(cmd);
     }
     var child = exec(cmd, function(err, stdout, stderr) {
@@ -15,15 +15,20 @@ var next = function(cmds, displayCmdItself, cb) {
         if (!cmds.length) {
             return cb && cb(null, stdout, stderr);
         }
-        next(cmds, displayCmdItself, cb);
+        next(cmds, options, cb);
     });
-    child.stdout.pipe(process.stdout);
-    child.stderr.pipe(process.stderr);
+    if (options.displayCmdResult) {
+        child.stdout.pipe(process.stdout);
+        child.stderr.pipe(process.stderr);
+    }
 };
 
-var shell = function(commands, displayCmdItself, cb) {
+var shell = function(commands, options, cb) {
     var cmds = commands.slice();
-    next(cmds, displayCmdItself, cb);
+    next(cmds, Object.assign({
+        displayCmdItself: false,
+        displayCmdResult: true
+    }, options), cb);
 };
 
 module.exports = shell;

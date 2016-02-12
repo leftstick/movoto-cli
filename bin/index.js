@@ -41,17 +41,20 @@ if (process.argv.length === 2) {
                 cmd.options.forEach((opt) => {
                     c.option(opt.flags, opt.description);
                 });
-                c.action(function(options) {
-                    if (!cmd.precheck(options)) {
+                c.action(function() {
+                    var args = Array.prototype.slice.call(arguments);
+                    if (!cmd.precheck.apply(cmd, args)) {
                         c.help();
                         return;
                     }
                     try {
-                        cmd.action(options, function(err) {
-                            if (err) {
-                                console.log(chalk.red(err));
+                        cmd.action.apply(cmd, args.concat([
+                            function(err) {
+                                if (err) {
+                                    console.log(chalk.red(err));
+                                }
                             }
-                        });
+                        ]));
                     } catch (e) {
                         console.log(chalk.red(e));
                     }
