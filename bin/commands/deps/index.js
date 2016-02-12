@@ -18,7 +18,7 @@ var cmd = {
         promiseify(fs.stat)(path.resolve(process.cwd(), 'package.json'))
             .then(function(stat) {
                 if (!stat.isFile()) {
-                    cb('package.json is not a file!!!');
+                    throw new Error('package.json is not a file!!!');
                 }
 
                 return promiseify(shell)([

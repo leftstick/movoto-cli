@@ -5,6 +5,7 @@
 * [git](#git)
 * [lint](#lint)
 * [server](#server)
+* [deps](#deps)
 
 
 ### git ###
@@ -50,3 +51,13 @@ movoto server [options]
 Serve current repo as web server.
 
 ![](./img/server.png)
+
+### deps ###
+
+```bash
+movoto deps
+```
+
+Check if there is any update available for current package.json.
+
+![](./img/deps.png)
