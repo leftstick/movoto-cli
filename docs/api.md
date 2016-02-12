@@ -26,7 +26,7 @@ Config `git` for the local repo, including `alias`, `ui`, `encoding`...
 ### lint ###
 
 ```bash
-movoto lint <filePath>
+movoto lint [filePath] [options]
 ```
 
 Lint your JavaScript source code.
@@ -34,6 +34,10 @@ Lint your JavaScript source code.
 * `filePath`: Can be either explicit file path, or [glob-pattern](https://github.com/isaacs/node-glob#glob-primer)
 
 >You have to make sure the `glob-pattern` to be quoted if you use it.
+
+**lint options**
+
+* `-u`, `--unstaged`: lint not staged files
 
 ![](./img/lint.png)
 
