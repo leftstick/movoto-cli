@@ -37,7 +37,7 @@ Lint your JavaScript source code.
 
 **lint options**
 
-* `-u`, `--unstaged`: lint not staged files
+* `-u`, `--unstaged`: lint not staged files. If you have code to be committed to git server, you can use this option instead of using `fileGlob` to specify every file
 
 ![](./img/lint.png)
 
