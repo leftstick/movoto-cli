@@ -7,6 +7,8 @@ var chalk = require('chalk');
 var glob = require('glob');
 var shell = require('../../lib/shell');
 
+var log = console.log;
+
 var cmd = {
     command: 'lint [fileGlob]',
     description: 'lint specific JavaScript code',
@@ -50,11 +52,11 @@ var cmd = {
         filesThen
             .then(function(files) {
                 if (!files || !files.length) {
-                    return console.log(chalk.yellow('no matched file found!'));;
+                    return log(chalk.yellow('no matched file found!'));;
                 }
                 var report = cli.executeOnFiles(files);
                 var formatter = CLIEngine.getFormatter('stylish');
-                console.log(formatter(report.results) || chalk.green('The code looks all good!'));
+                log(formatter(report.results) || chalk.green('The code looks all good!'));
             })
             .catch(cb);
     }

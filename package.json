@@ -1,6 +1,6 @@
 {
   "name": "movoto-cli",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "movoto-cli make you have fun in chinese new year",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,7 +34,7 @@
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "connect-history-api-fallback": "^1.1.0",
-    "eslint": "^1.10.3",
+    "eslint": "^2.0.0",
     "glob": "^7.0.0",
     "just-promiseify": "^1.1.1",
     "picture-tube": "^1.0.0",
