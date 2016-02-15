@@ -16,10 +16,10 @@ var cmd = {
             description: 'email you\'d like to set for the repo'
         }
     ],
-    precheck: function(options) {
+    precheck: function(options){
         return options.username && options.email;
     },
-    action: function(options) {
+    action: function(options){
         shell([
             `git config --local user.name ${options.username}`,
             `git config --local user.email ${options.email}`,
@@ -41,7 +41,7 @@ var cmd = {
             'git config --local alias.pr pull --rebase',
             'git config --local alias.pl pull',
             'git config --local alias.ps push'
-        ], {displayCmdItself: true, displayCmdResult: false});
+        ], { displayCmdItself: true, displayCmdResult: false });
     }
 };
 

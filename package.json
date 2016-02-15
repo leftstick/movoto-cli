@@ -1,6 +1,6 @@
 {
   "name": "movoto-cli",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "movoto-cli make you have fun in chinese new year",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

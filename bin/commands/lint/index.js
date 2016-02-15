@@ -17,7 +17,8 @@ var cmd = {
     options: [
         {
             flags: '-u, --unstaged',
-            description: 'lint not staged files',
+            description: 'lint not staged files'
+        }, {
             flags: '-e, --env <environment>',
             description: 'which environments your script is designed to run in'
         }
