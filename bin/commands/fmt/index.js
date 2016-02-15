@@ -59,8 +59,9 @@ var cmd = {
                     var codeStr = fs.readFileSync(file, 'utf8');
                     var formattedCode = esformatter.format(codeStr, configFile);
                     fs.writeFileSync(file, formattedCode, 'utf8');
+                    log('--' + chalk.yellow(file));
                 });
-                log(chalk.green('The code formatted!'));
+                log(chalk.green('Above file' + (files.length > 1 ? 's' : '') + ' formatted!'));
             })
             .catch(cb);
     }

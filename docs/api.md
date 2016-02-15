@@ -4,6 +4,7 @@
 
 * [git](#git)
 * [lint](#lint)
+* [fmt](#fmt)
 * [server](#server)
 * [deps](#deps)
 
@@ -41,6 +42,24 @@ Lint your JavaScript source code.
 * `-e`, `--env`: which environments your script is designed to run in. Available choices [`browser`, `node`]. `node` is used by default.
 
 ![](./img/lint.png)
+
+### fmt ###
+
+```bash
+movoto fmt [filePath] [options]
+```
+
+Format specific JavaScript code.
+
+* `filePath`: Can be either explicit file path, or [glob-pattern](https://github.com/isaacs/node-glob#glob-primer)
+
+>You have to make sure the `glob-pattern` to be quoted if you use it.
+
+**fmt options**
+
+* `-u`, `--unstaged`: Format not staged files. If you have code to be committed to git server, you can use this option instead of using `fileGlob` to specify every file
+
+![](./img/fmt.png)
 
 ### server ###
 
