@@ -9,26 +9,35 @@ var shell = require('../../lib/shell');
 
 var log = console.log;
 
+var ENVS = ['browser', 'node'];
+
 var cmd = {
     command: 'lint [fileGlob]',
     description: 'lint specific JavaScript code',
     options: [
         {
             flags: '-u, --unstaged',
-            description: 'lint not staged files'
+            description: 'lint not staged files',
+            flags: '-e, --env <environment>',
+            description: 'which environments your script is designed to run in'
         }
     ],
     precheck: function(){
         return true;
     },
     action: function(fileGlob, options, cb){
+        var filesThen,
+            ERROR = 'Incorrect usage, you have to set either fileGlob or --unstaged option',
+            configFile = path.resolve(__dirname, 'eslintrc_node.json');
+
+        if (options.env && ENVS.indexOf(options.env) > -1 && options.env === 'browser'){
+            configFile = path.resolve(__dirname, 'eslintrc_browser_legacy.json');
+        }
 
         var cli = new CLIEngine({
-            configFile: path.resolve(__dirname, 'eslintrc.json'),
+            configFile: configFile,
             useEslintrc: false
         });
-        var filesThen,
-            ERROR = 'Incorrect usage, you have to set either fileGlob or --unstaged option';
 
         if (fileGlob){
             filesThen = promiseify(glob)(fileGlob, {

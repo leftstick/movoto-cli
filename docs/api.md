@@ -38,6 +38,7 @@ Lint your JavaScript source code.
 **lint options**
 
 * `-u`, `--unstaged`: lint not staged files. If you have code to be committed to git server, you can use this option instead of using `fileGlob` to specify every file
+* `-e`, `--env`: which environments your script is designed to run in. Available choices [`browser`, `node`]. `node` is used by default.
 
 ![](./img/lint.png)
 
@@ -52,7 +53,7 @@ movoto server [options]
 * `-p`, `--port`: Use a specific port for the server
 * `-m`, `--html5`: Enable html5 mode, which respond with index.html for 404 request
 
-Serve current repo as web server.
+Serve current repo as static web server.
 
 ![](./img/server.png)
 
@@ -62,6 +63,6 @@ Serve current repo as web server.
 movoto deps
 ```
 
-Check if there is any update available for current package.json.
+Check if there is any update available dependencies for current package.json.
 
 ![](./img/deps.png)
