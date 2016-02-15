@@ -26,7 +26,6 @@ var cmd = {
         var filesThen,
             ERROR = 'Incorrect usage, you have to set either fileGlob or --unstaged option',
             configFile = require(path.resolve(__dirname, 'esformatter.json'));
-        ;
 
         if (fileGlob){
             filesThen = promiseify(glob)(fileGlob, {
