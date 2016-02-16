@@ -434,16 +434,6 @@
             "WhileStatementClosingBrace" : 1
         }
     },
-    "jsx": {
-        "formatJSX": true,
-        "attrsOnSameLineAsTag": false,
-        "maxAttrsOnTag": 3,
-        "firstAttributeOnSameLine": true,
-        "alignWithFirstAttribute": false,
-        "htmlOptions": {
-            "unformatted": []
-        }
-    },
     "quotes": {
         "type": "single",
         "avoidEscape": false
@@ -452,7 +442,6 @@
         "esformatter-braces",
         "esformatter-collapse-objects",
         "esformatter-dot-notation",
-        "esformatter-jsx",
         "esformatter-literal-notation",
         "esformatter-quotes"
     ]
