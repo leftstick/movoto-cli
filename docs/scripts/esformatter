@@ -287,7 +287,7 @@
             "ForStatementOpeningBrace" : 0,
             "ForStatementClosingBrace" : 1,
             "ForStatementSemicolon" : 0,
-            "FunctionDeclarationOpeningBrace" : 1,
+            "FunctionDeclarationOpeningBrace" : 0,
             "FunctionDeclarationClosingBrace" : 1,
             "FunctionExpressionOpeningBrace" : 0,
             "FunctionExpressionClosingBrace" : 1,

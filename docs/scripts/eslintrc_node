@@ -49,7 +49,7 @@
         "valid-typeof": 2,
         "accessor-pairs": [1, { "getWithoutSet": true, "setWithoutGet": true }],
         "array-callback-return": 1,
-        "block-scoped-var": 1,
+        "block-scoped-var": 0,
         "complexity": [1, 7],
         "consistent-return": 0,
         "curly": 1,
@@ -134,7 +134,7 @@
         "eol-last": [1, "LINEBREAK_OS"],
         "func-names": 0,
         "func-style": [1, "expression", { "allowArrowFunctions": true }],
-        "id-length": [2, {"min": 1, "max": 30, "properties": "never"}],
+        "id-length": [2, {"min": 1, "max": 35, "properties": "never"}],
         "id-match": 0,
         "id-blacklist": 0,
         "indent": [1, 4, {"VariableDeclarator": 1, "SwitchCase": 1}],
@@ -192,6 +192,18 @@
         "wrap-regex": 0
     },
     "globals": {
-        "define": true
+        "define": true,
+        "TrackingManager": true,
+        "MovotoMobile": true,
+        "MovotoValidator": true,
+        "commonService": true,
+        "Hotlead": true,
+        "Movoto": true,
+        "Swipe": true,
+        "HeaderController": true,
+        "EJS": true,
+        "poiData": true,
+        "Highcharts": true,
+        "google": true
     }
 }

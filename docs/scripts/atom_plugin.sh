@@ -51,9 +51,9 @@ elif [[ "$osName" == *"Darwin"* ]]; then
 fi
 
 if [[ $os != "WINDOWS" ]]; then
-    sudo npm install eslint -g --registry=https://registry.npm.taobao.org
+    sudo npm install eslint -g
 else
-    npm install eslint -g --registry=https://registry.npm.taobao.org
+    npm install eslint -g
 fi
 if [[ $? -ne 0 ]]; then
     echo "eslint "$error
