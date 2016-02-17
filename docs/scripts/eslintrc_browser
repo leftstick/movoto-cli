@@ -170,7 +170,7 @@
         "no-trailing-spaces": [1, { "skipBlankLines": true }],
         "no-underscore-dangle": 0,
         "no-unneeded-ternary": 1,
-        "object-curly-spacing": [1, "always", { "objectsInObjects": false, "arraysInObjects": false }],
+        "object-curly-spacing": [1, "always", { "objectsInObjects": true, "arraysInObjects": true }],
         "one-var": 0,
         "one-var-declaration-per-line": 0,
         "operator-assignment": 0,
@@ -203,6 +203,9 @@
         "EJS": true,
         "poiData": true,
         "Highcharts": true,
-        "google": true
+        "google": true,
+        "require": true,
+        "injector": true,
+        "SearchResultMapViewController": true
     }
 }
