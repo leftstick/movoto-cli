@@ -429,7 +429,7 @@
             "VariableValue" : 0,
             "VariableDeclarationSemiColon" : 0,
             "WhileStatementConditionalOpening" : 0,
-            "WhileStatementConditionalClosing" : 1,
+            "WhileStatementConditionalClosing" : 0,
             "WhileStatementOpeningBrace" : 1,
             "WhileStatementClosingBrace" : 1
         }

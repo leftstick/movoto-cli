@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var browserSync = require('browser-sync');
 var history = require('connect-history-api-fallback');
 
