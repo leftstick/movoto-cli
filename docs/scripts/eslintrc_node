@@ -21,7 +21,7 @@
     "rules": {
         "comma-dangle": [2, "never"],
         "no-cond-assign": [2, "except-parens"],
-        "no-console": 1,
+        "no-console": 0,
         "no-constant-condition": 1,
         "no-control-regex": 2,
         "no-debugger": 2,
