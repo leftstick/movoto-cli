@@ -4,3 +4,8 @@ node_modules
 
 #osx
 .DS_Store
+
+
+#generated
+bin/commands/lint/eslintrc_browser_legacy
+bin/commands/lint/eslintrc_node

@@ -23,16 +23,16 @@ var cmd = {
             description: 'which environments your script is designed to run in'
         }
     ],
-    precheck: function(){
+    precheck: function() {
         return true;
     },
-    action: function(fileGlob, options, cb){
+    action: function(fileGlob, options, cb) {
         var filesThen,
             ERROR = 'Incorrect usage, you have to set either fileGlob or --unstaged option',
-            configFile = path.resolve(__dirname, 'eslintrc_node.json');
+            configFile = path.resolve(__dirname, 'eslintrc_node');
 
-        if (options.env && ENVS.indexOf(options.env) > -1 && options.env === 'browser'){
-            configFile = path.resolve(__dirname, 'eslintrc_browser_legacy.json');
+        if (options.env && ENVS.indexOf(options.env) > -1 && options.env === 'browser') {
+            configFile = path.resolve(__dirname, 'eslintrc_browser_legacy');
         }
 
         var cli = new CLIEngine({
@@ -40,17 +40,17 @@ var cmd = {
             useEslintrc: false
         });
 
-        if (fileGlob){
+        if (fileGlob) {
             filesThen = promiseify(glob)(fileGlob, {
                 cwd: process.cwd()
             });
-        }else if (options.unstaged){
+        } else if (options.unstaged) {
             filesThen = promiseify(shell)(['git status --short'], {
                 displayCmdItself: false,
                 displayCmdResult: false
             })
-                .then(function(data){
-                    if (!data || !data.length || !data[0]){
+                .then(function(data) {
+                    if (!data || !data.length || !data[0]) {
                         return [];
                     }
                     return data[0].split('M')
@@ -58,13 +58,13 @@ var cmd = {
                         .map((file) => file.trim().replace('\n', ''))
                         .filter((file) => path.extname(file) === '.js');
                 });
-        }else {
+        } else {
 
             filesThen = Promise.reject(new Error(ERROR));
         }
         filesThen
-            .then(function(files){
-                if (!files || !files.length){
+            .then(function(files) {
+                if (!files || !files.length) {
                     return log(chalk.yellow('no matched file found!'));
                 }
                 var report = cli.executeOnFiles(files);

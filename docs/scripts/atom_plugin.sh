@@ -65,8 +65,8 @@ echo "Frontend environment plugins installed"
 
 echo ""
 echo "Downloading .eslintrc"
-curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/docs/scripts/eslintrc_browser > ~/.eslintrc_browser
-curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/docs/scripts/eslintrc_node > ~/.eslintrc_node
+curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/bin/commands/lint/eslintrc_browser_legacy.json > ~/.eslintrc_browser
+curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/bin/commands/lint/eslintrc_node.json > ~/.eslintrc_node
 echo ""
 
 if [[ $os == "WINDOWS" ]]; then
@@ -81,7 +81,7 @@ else
 fi
 
 echo "Downloading .esformatter"
-curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/docs/scripts/esformatter > ~/.esformatter
+curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/bin/commands/fmt/esformatter.json > ~/.esformatter
 
 echo "Downloading snippets.cson"
 curl https://raw.githubusercontent.com/leftstick/movoto-cli/master/docs/scripts/snippets.cson > ~/.atom/snippets.cson
