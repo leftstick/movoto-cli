@@ -120,7 +120,7 @@
         "no-shadow": [2, {"builtinGlobals": false, "hoist": "functions"}],
         "no-undef-init": 1,
         "no-undef": [2, { "typeof": false }],
-        "no-undefined": 1,
+        "no-undefined": 0,
         "no-unused-vars": [1, { "vars": "all", "args": "none" }],
         "no-use-before-define": [1, {"functions": true, "classes": true}],
         "array-bracket-spacing": [1, "never"],
