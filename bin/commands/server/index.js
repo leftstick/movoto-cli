@@ -16,10 +16,10 @@ var cmd = {
             description: 'enable html5 mode, which respond with index.html for 404 request'
         }
     ],
-    precheck: function(){
+    precheck: function() {
         return true;
     },
-    action: function(options, cb){
+    action: function(options, cb) {
         var bs = browserSync.create();
         var initOpts = {
             ui: false,
@@ -35,7 +35,7 @@ var cmd = {
             reloadOnRestart: true,
             injectChanges: true
         };
-        if (options.html5){
+        if (options.html5) {
             initOpts.middleware = [history()];
         }
 

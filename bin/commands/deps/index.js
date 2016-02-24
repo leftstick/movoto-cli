@@ -10,23 +10,23 @@ var cmd = {
     command: 'deps',
     description: 'check if there is any update available for current package.json',
     options: [],
-    precheck: function(){
+    precheck: function() {
         return true;
     },
-    action: function(options, cb){
+    action: function(options, cb) {
 
         promiseify(fs.stat)(path.resolve(process.cwd(), 'package.json'))
-            .then(function(stat){
-                if (!stat.isFile()){
+            .then(function(stat) {
+                if (!stat.isFile()) {
                     throw new Error('package.json is not a file!!!');
                 }
 
                 return promiseify(shell)([
                     'npm outdated --loglevel=error'
-                ], { displayCmdItself: false, displayCmdResult: true });
+                ], {displayCmdItself: false, displayCmdResult: true});
             })
-            .then(function(arr){
-                if (!arr[0]){
+            .then(function(arr) {
+                if (!arr[0]) {
                     console.log(chalk.green('Everything looks good!'));
                 }
             })

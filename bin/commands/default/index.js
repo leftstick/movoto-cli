@@ -1,6 +1,6 @@
 'use strict';
 
-var cmd = function(){
+var cmd = function() {
     var pictureTube = require('picture-tube');
     var tube = pictureTube();
     tube.pipe(process.stdout);
