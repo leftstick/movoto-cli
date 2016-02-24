@@ -25,7 +25,7 @@
     showErrorTabLine: true
   "linter-eslint":
     globalNodePath: "UPDATE_NODE_PATH"
-    useGlobalEslint: true
+    useGlobalEslint: false
   minimap: {}
   "tree-view": {}
   welcome:

@@ -50,16 +50,6 @@ elif [[ "$osName" == *"Darwin"* ]]; then
     os='OSX'
 fi
 
-if [[ $os != "WINDOWS" ]]; then
-    sudo npm install eslint -g
-else
-    npm install eslint -g
-fi
-if [[ $? -ne 0 ]]; then
-    echo "eslint "$error
-    exit 1
-fi
-
 echo ""
 echo "Frontend environment plugins installed"
 
