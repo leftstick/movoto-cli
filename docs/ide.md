@@ -57,7 +57,7 @@ cat ~/.eslintrc_node > ~/.eslintrc
 
 OK, all configuration are done! Now, try launching your atom, and have fun with auto-formatter and auto-linting as following:
 
-![](./img/eslint.png)
+![](./img/format.gif)
 
 
 ### Install HomeBrew ###
