@@ -18,9 +18,6 @@ var cmd = {
         {
             flags: '-u, --unstaged',
             description: 'lint not staged files'
-        }, {
-            flags: '-e, --env <environment>',
-            description: 'which environments your script is designed to run in'
         }
     ],
     precheck: function() {
@@ -30,10 +27,6 @@ var cmd = {
         var filesThen,
             ERROR = 'Incorrect usage, you have to set either fileGlob or --unstaged option',
             configFile = path.resolve(__dirname, 'eslintrc_node');
-
-        if (options.env && ENVS.indexOf(options.env) > -1 && options.env === 'browser') {
-            configFile = path.resolve(__dirname, 'eslintrc_browser_legacy');
-        }
 
         var cli = new CLIEngine({
             configFile: configFile,

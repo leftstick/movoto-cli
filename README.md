@@ -33,9 +33,6 @@ movoto
 
 For more usage, check it here: [API](./docs/api.md)
 
-## IDE support ##
-
-If you'd like to have `lint` and `formatter` features work automatically in your IDE, check it here: [API](./docs/ide.md)
 
 ## LICENSE ##
 
